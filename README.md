@@ -20,7 +20,7 @@ Este comando executa simultaneamente:
 react-scripts start → Frontend React
 dotnet run → API ASP.NET Core
 
-## O comando npm start é o ponto de entrada principal do sistema e inicia simultaneamente o frontend React e a API ASP.NET Core.
+# O comando npm start é o ponto de entrada principal do sistema e inicia simultaneamente o frontend React e a API ASP.NET Core.
 Não é necessário executar dotnet run manualmente.
 
 
@@ -31,7 +31,7 @@ Migrations incluídas no repositório:
 InitialCreate
 AutoTvdeDbContextModelSnapshot
 
-#Importante
+# Importante
 
 Base de Dados (LocalDB)
 A aplicação utiliza SQL Server LocalDB
@@ -41,13 +41,7 @@ O banco será criado automaticamente se não existir
 As migrations serão aplicadas
 Não é necessário executar comandos manuais de migration para uso básico
 
-A aplicação pode aplicar migrations automaticamente via:
-
-Database.Migrate();
-ou manualmente:
-dotnet ef database update
-
-## Endereços após inicialização
+# Endereços após inicialização
 
 Após o comando npm start, o sistema estará disponível em:
 
@@ -56,3 +50,37 @@ Frontend (React)
 
 API + Swagger
 -> https://localhost:5000/swagger/index.html
+
+Json para testes:
+api/auth/login
+{
+  "email": "admin@mds.pt",
+  "password": "Passw0rd!"
+}
+
+/api/clients
+{
+  "name": "João Pereira",
+  "email": "joao.pereira@outlook.com",
+  "nif": "245789321",
+  "birthDate": "1985-07-15T10:30:00.000Z"
+}
+
+/api/mediators
+{
+  "name": "João Silva",
+  "email": "joao.silva@mediators.pt",
+  "tier": "Bronze",
+  "commissionRate": 0.05
+}
+
+/api/quotes/price
+{
+  "birthDate": "1992-08-15T00:00:00Z",
+  "vehiclePowerKw": 85,
+  "vehicleUsage": "TVDE",
+  "city": "Lisboa",
+  "ncbYears": 5,
+  "hasGlassCoverage": true,
+  "hasRoadsideCoverage": true
+}
