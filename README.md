@@ -5,41 +5,41 @@ Auto TVDE Lite
 Auto TVDE Lite é uma aplicação fullstack desenvolvida como parte de um desafio técnico, com o objetivo de simular um sistema simples de cotação e emissão de apólices para veículos TVDE.
 
 Pré-requisitos
-Node.js 18+
-.NET SDK 9.0
-SQL Server LocalDB
+ <br /> Node.js 18+
+ <br /> .NET SDK 9.0
+ <br /> SQL Server LocalDB
 
 # Execução do Projeto
 1. Instalação das dependências (frontend) na pasta: AutoTVDE\autotvde-ui
-npm install
+ <br /> npm install
 
 2. Execução do sistema completo (Frontend + API)
-npm start
+ <br /> npm start
 
 Este comando executa simultaneamente:
-react-scripts start → Frontend React
-dotnet run → API ASP.NET Core
+ <br /> react-scripts start → Frontend React
+ <br /> dotnet run → API ASP.NET Core
 
 # O comando npm start é o ponto de entrada principal do sistema e inicia simultaneamente o frontend React e a API ASP.NET Core.
 Não é necessário executar dotnet run manualmente.
 
 
 Base de Dados & Migrations
-Base de dados: SQL Server LocalDB
-ORM: Entity Framework Core
-Migrations incluídas no repositório:
-InitialCreate
-AutoTvdeDbContextModelSnapshot
+ <br /> Base de dados: SQL Server LocalDB
+ <br /> ORM: Entity Framework Core
+ <br /> Migrations incluídas no repositório:
+ <br /> InitialCreate
+ <br /> AutoTvdeDbContextModelSnapshot
 
 # Importante
 
-Base de Dados (LocalDB)
-A aplicação utiliza SQL Server LocalDB
+ <br /> Base de Dados (LocalDB)
+ <br /> A aplicação utiliza SQL Server LocalDB
 
 Ao iniciar a API:
-O banco será criado automaticamente se não existir
-As migrations serão aplicadas
-Não é necessário executar comandos manuais de migration para uso básico
+ <br /> O banco será criado automaticamente se não existir
+ <br /> As migrations serão aplicadas
+ <br /> Não é necessário executar comandos manuais de migration para uso básico
 
 # Endereços após inicialização
 
@@ -51,31 +51,31 @@ Frontend (React)
 API + Swagger
 -> https://localhost:5000/swagger/index.html
 
-Json para testes:
-api/auth/login
-{
+# Json, Request body para alguns endpoints da api:
+ <br /> api/auth/login
+ <br /> {
   "email": "admin@mds.pt",
   "password": "Passw0rd!"
 }
 
-/api/clients
-{
+ <br /> /api/clients
+ <br /> {
   "name": "João Pereira",
   "email": "joao.pereira@outlook.com",
   "nif": "245789321",
   "birthDate": "1985-07-15T10:30:00.000Z"
-}
+ }
 
-/api/mediators
-{
+ <br /> /api/mediators
+ <br /> {
   "name": "João Silva",
   "email": "joao.silva@mediators.pt",
   "tier": "Bronze",
   "commissionRate": 0.05
 }
 
-/api/quotes/price
-{
+ <br /> /api/quotes/price
+ <br /> {
   "birthDate": "1992-08-15T00:00:00Z",
   "vehiclePowerKw": 85,
   "vehicleUsage": "TVDE",
@@ -83,4 +83,4 @@ api/auth/login
   "ncbYears": 5,
   "hasGlassCoverage": true,
   "hasRoadsideCoverage": true
-}
+ }
