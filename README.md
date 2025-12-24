@@ -10,7 +10,7 @@ Node.js 18+
 SQL Server LocalDB
 
 # Execução do Projeto
-1. Instalação das dependências (frontend)
+1. Instalação das dependências (frontend) na pasta: AutoTVDE\autotvde-ui
 npm install
 
 2. Execução do sistema completo (Frontend + API)
